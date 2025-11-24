@@ -15,7 +15,7 @@
         }
 
         /* For header */
-        header 
+        .header 
         {
             background: linear-gradient(to top right, rgb(232, 194, 24) 25%, rgb(241, 218, 70) 100%);
             background-color: rgb(239, 200, 26);
@@ -26,8 +26,22 @@
             left: 0;
             width: 100%;
             z-index:1000;
+            animation-duration:2s;
+         animation-name: slideDown;
+            animation-iteration-count:1;
+            animation-play-state:running;
+            animation-direction:normal;
+            animation-timing-function:ease-in-out;
+
         }
-        
+        @keyframes slideDown{
+            from{
+                top : -100px;
+            }
+            to {
+                top:0;
+            }
+        }
         .main-title {
             font-size: 50px;
             font-weight: bold;
@@ -90,7 +104,7 @@
         }
 
         /* For footer */
-        footer 
+        .footer 
         {
             background-color: rgb(0, 0, 0);
             padding: 40px;
@@ -99,7 +113,23 @@
             left: 0;
             bottom: 0;
             text-align: center;
+                 animation-duration:2s;
+         animation-name: slideDown2;
+            animation-iteration-count:1;
+            animation-play-state:running;
+            animation-direction:normal;
+            animation-timing-function:ease-in-out;
+
         }
+        @keyframes slideDown2{
+            from{
+                bottom : -100px;
+            }
+            to {
+                bottom:0;
+            }
+        }
+    
 
     </style>
 
@@ -107,7 +137,7 @@
 
 
 
-<header>
+<header class="header">
         <h1 class="main-title">THE BLACK MAMBA: 20 YEAR LEGACY</h1>
 </header>
 
@@ -117,6 +147,6 @@
 </body>
 
 
-<footer>
+<footer class = "footer">
     <h1 style="color: rgb(245, 230, 28);">© 2024 THE BLACK MAMBA: 20 YEAR LEGACY. All rights reserved.</h1>
 </footer>
