@@ -93,7 +93,8 @@
         }
 
         /* For footer */
-        .footer {
+        .footer 
+        {
             background-color: rgb(0, 0, 0);
             padding: 20px;
             width: 100%;
@@ -117,7 +118,8 @@
             }
         }
 
-        .content {
+        .content 
+        {
             display:flex;
             justify-content:center;
             align-items:center;
@@ -129,76 +131,141 @@
             padding-bottom: 100px;
         }
 
-        .test1
-        {
-            background-image: url();
-        }
         
-.merchandisebutton{
-position: absolute; 
-left: 20px; 
-top: 15px; 
-padding: 10px 15px; 
-font-size: 20px; 
-background-color: rgb(245, 191, 28); 
-color: black; 
-border: black; 
-border-radius: 5px; 
-cursor: pointer;
+        .merchandisebutton
+        {
+            position: absolute; 
+            left: 20px; 
+            top: 15px; 
+            padding: 10px 15px; 
+            font-size: 20px; 
+            background-color: rgb(245, 191, 28); 
+            color: black; 
+            border: black; 
+            border-radius: 5px; 
+            cursor: pointer;
+        }
 
-    }
+        .legacybutton
+        {
+            position: absolute; 
+            right: 50px; 
+            top: 15px; 
+            padding: 10px 15px; 
+            font-size: 20px; 
+            background-color: rgb(245, 191, 28); 
+            color: black; 
+            border: black; 
+            border-radius: 5px; 
+            cursor: pointer;
+        }
 
-    .legacybutton{
-position: absolute; 
-right: 50px; 
-top: 15px; 
-padding: 10px 15px; 
-font-size: 20px; 
-background-color: rgb(245, 191, 28); 
-color: black; 
-border: black; 
-border-radius: 5px; 
-cursor: pointer;
+        .biographybutton
+        {
+            position: absolute; 
+            left: 500px; 
+            top: 15px; 
+            padding: 10px 15px; 
+            font-size: 20px; 
+            background-color: rgb(245, 191, 28); 
+            color: black; 
+            border: black; 
+            border-radius: 5px; 
+            cursor: pointer;
+        }
 
-    }
+        .statlinesbutton
+        {
+            position: absolute; 
+            right: 500px; 
+            top: 15px; 
+            padding: 10px 15px; 
+            font-size: 20px; 
+            background-color: rgb(245, 191, 28); 
+            color: black; 
+            border: black; 
+            border-radius: 5px; 
+            cursor: pointer;
+        }
 
-    .biographybutton{
-position: absolute; 
-left: 500px; 
-top: 15px; 
-padding: 10px 15px; 
-font-size: 20px; 
-background-color: rgb(245, 191, 28); 
-color: black; 
-border: black; 
-border-radius: 5px; 
-cursor: pointer;
+        .navtext
+        {
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            margin: 0;
+        }
 
-    }
+        .navtext:hover
+        {
+            color: purple;
+        }
 
-    .statlinesbutton{
-position: absolute; 
-right: 500px; 
-top: 15px; 
-padding: 10px 15px; 
-font-size: 20px; 
-background-color: rgb(245, 191, 28); 
-color: black; 
-border: black; 
-border-radius: 5px; 
-cursor: pointer;
+        /* for the carousel */
+        .carousel 
+        {
+            width: calc(var(--img-width) * var(--visible-count));
+            overflow: hidden;
+            margin: 40px auto;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.03);
+        }
 
-    }
-.navtext{
-    font-size: 18px;
-    font-weight: bold;
-    color: black;
-    margin: 0;
+        .track 
+        {
+            width: calc(var(--img-width) * 8);
+            display: flex;
+            animation: scroll var(--speed) linear infinite;
+        }
 
-}
-.navtext:hover{
-    color: purple;
-}
+        .track img 
+        {
+            width: var(--img-width);
+            height: 300px;
+            flex: 0 0 auto;
+            display: block;
+            object-fit: cover;
+            image-rendering: center;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        @keyframes scroll 
+        {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+        }
+
+        @media (prefers-reduced-motion: reduce) 
+        { 
+            .track { animation: none; } 
+        } 
+
+        @media (max-width: 900px) 
+        { 
+            :root { --img-width: 200px; --visible-count: 3; } 
+            .carousel { width: calc(var(--img-width) * var(--visible-count)); } 
+        }   
+
+        :root 
+        {
+            --img-width: 350px;
+            --visible-count: 4;
+            --speed: 20s;
+        }
+
+        .ceterguy
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+
     </style>
 </head>
 
@@ -215,6 +282,24 @@ cursor: pointer;
         <p>Background</p>
     </div>
 
+<div class="centerguy">
+    <div class="carousel">
+        <div class="track">
+            <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/merchandise.png">
+            <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/biography.webp">
+            <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/statlines.png">
+            <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/legacy.webp">
+
+            <!-- for dupe -->
+            <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/merchandise.png">
+            <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/biography.webp">
+            <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/statlines.png">
+            <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/legacy.webp">
+        </div>
+    </div>
+</div>
+
+
     <footer class="footer">
 
 
@@ -229,10 +314,10 @@ cursor: pointer;
            <div class="navtext">Biography</div>
         </button>
         <button onclick="window.location.href='statlines.html'"; class="statlinesbutton">
-           <div class="navtext">Statlines</div>
+           <div class="navtext">Stat-lines</div>
         </button>
         <button onclick="window.location.href='legacy.html'"; class="legacybutton">
-           <div class="navtext">Legacy</div>
+           <div class="navtext">NBA Legacy</div>
         </button>
         
     </footer>
