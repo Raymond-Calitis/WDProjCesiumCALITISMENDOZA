@@ -71,7 +71,7 @@
             left: 0;
             width: 100%;
             height: 100vh;
-            background-image: url("https://github.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/blob/main/images/KobeBackground.png?raw=true");
+            background-image: url("https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/KobeBackground.png");
             background-color: #3a3a3a; 
             background-size: cover;
             background-repeat: no-repeat; 
@@ -192,6 +192,199 @@ cursor: pointer;
 .navtext:hover{
     color: purple;
 }
+@keyframes imagepopup{
+    0% {
+        top:1000px;
+        transform: scale(0.5);
+        
+    }
+   
+    100% {
+        top: 200px;
+        transform: scale(1.05);
+        
+    }
+}
+   
+@keyframes button1{
+    0% {
+        top:1000px;
+        transform: scale(0.5);
+        
+    }
+   
+    100% {
+        top: 400px;
+        transform: scale(1.05);
+        
+    }
+}
+   @keyframes button2{
+    0% {
+        top:1000px;
+        transform: scale(0.5);
+        
+    }
+   
+    100% {
+        top: 600px;
+        transform: scale(1.05);
+        
+    }
+}
+   
+.kobes{
+    width:300px;
+    height:auto;
+    position:absolute;
+    top:200px;
+    left:60%;
+    animation-name:imagepopup;
+    animation-duration: 2s;
+    animation-fill-mode:forwards;
+}
+.grinches{
+    width:300px;
+    height:auto;
+    position:absolute;
+    top:200px;
+    left:25%;
+    animation-name:imagepopup;
+    animation-duration: 2s;
+    animation-fill-mode:forwards;
+}
+.grinchesbutton{
+    border-radius:50%;
+    position:absolute;
+    top:400px;
+    left:25%;
+    font-size:24px;
+    color:black;
+    width:120px;
+    height: 120px;
+    transition: all 1.5s ease;
+    animation-name: button1;
+    animation-duration: 2s;
+    animation-fill-mode:forwards;
+}
+.grinchesbutton:hover{
+    background-color: purple;
+    cursor:pointer;
+}
+.buygrinchesbutton{
+    border-radius:50%;
+    position:absolute;
+    top:600px;
+    left:25%;
+    font-size:24px;
+    color:black;
+    width:120px;
+    height: 120px;
+    transition: all 1.5s ease;
+    animation-name: button2;
+    animation-duration: 2s;
+    animation-fill-mode:forwards;
+}
+.buygrinchesbutton:hover{
+    background-color: green;
+    cursor:pointer;
+}
+
+.textspacing{
+    margin:auto;
+}
+.textspacinggrinches{
+    margin:auto;
+    animation-name: glow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+@keyframes glow{
+    0% {
+        text-shadow: 0 0 5px green;
+    }
+    50% {
+        text-shadow: 0 0 100px green;
+    }
+    100% {
+        text-shadow: 0 0 5px green;
+    }
+}
+.gtart{
+    position:absolute;
+    font-size:20px;
+font-weight:bold;
+top:400px;
+left:35%;
+padding-right:51%;
+
+}
+.gtartforanother{
+    position:absolute;
+    font-size:20px;
+font-weight:bold;
+top:600px;
+left:35%;
+padding-right:51%;
+width:200px;
+z-index:1;
+
+}
+.kobesbutton{
+border-radius:50%;
+    position:absolute;
+    top:400px;
+    left:50%;
+    font-size:24px;
+    color:black;
+    width:120px;
+    height: 120px;
+    transition: all 1.5s ease;
+    animation-name: button1;
+    animation-duration: 2s;
+    animation-fill-mode:forwards;
+}
+.kobesbutton:hover{
+    background-color: purple;
+    cursor:pointer;
+}
+.buykobesbutton{
+border-radius:50%;
+    position:absolute;
+    top:600px;
+    left:50%;
+    font-size:24px;
+    color:black;
+    width:120px;
+    height: 120px;
+    transition: all 1.5s ease;
+    animation-name: button2;
+    animation-duration: 2s;
+    animation-fill-mode:forwards;
+    z-index:2;
+}
+.buykobesbutton:hover{
+    background-color: green;
+    cursor:pointer;
+}
+.ktartone{
+    position:absolute;
+    font-size:20px;
+font-weight:bold;
+top:400px;
+left:60%;
+
+}
+.ktarttwo{
+    position:absolute;
+    font-size:20px;
+font-weight:bold;
+top:600px;
+left:60%;
+
+}
     </style>
 </head>
 
@@ -204,8 +397,47 @@ cursor: pointer;
     
     <!-- Testing -->
     <div class="content">
-        <h2>Test Content</h2>
-        <p>Background</p>
+        <h2><img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/12926673.webp" class="grinches"></h2>
+        <button class="grinchesbutton"; id="g1"><h1; class="textspacinggrinches">Kobe Grinches</h1></button>
+        <button class="buygrinchesbutton"; id="g2"><h1; class="textspacinggrinches"> Buy Kobe Grinches</h1></button>
+        <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/Screenshot%202025-12-11%20224817.jpg" class="kobes">
+        <button class="kobesbutton"; id="k1"><h1; class="textspacinggrinches">Kobe Proto's</h1></button>
+        <button class="buykobesbutton"; id="k2"><h1; class="textspacinggrinches"> Buy Kobe Proto's</h1></button>
+
+<h2 id="Gtart1"; class="gtart"></h2>
+<h2 id="Gtart2"; class="gtartforanother"></h2>
+<h2 id="Ktart1"; class="ktartone"></h2>
+<h2 id="Ktart2"; class="ktarttwo"></h2>
+
+        
+        <p></p>
+<script>
+    function clear(){
+                Gtart1.innerHTML = "";
+                Gtart2.innerHTML = "";
+                Ktart1.innerHTML = "";
+                Ktart2.innerHTML = "";
+                
+            }
+      document.getElementById("g1").addEventListener("click",function() {
+                clear();
+                Gtart1.innerHTML = "Kobe grinches, known for its green colorway, amazing traction, and an overall comfortable design. This shoe is known for its supreme performance and its a must have for any basketball player who wants the best of the best.";
+            });
+            document.getElementById("g2").addEventListener("click",function() {
+                clear();
+                Gtart2.innerHTML = "Buy Kobe Grinches for $899.00. Available here: https://stockx.com/nike-kobe-6-protro-grinch?msockid=039055529ec56fbd1579404f9fd16ead";
+            });
+            document.getElementById("k1").addEventListener("click",function() {
+                clear();
+                Ktart1.innerHTML = "Kobe protos, known for its amazing traction and dominant performance. It is collection of Kobe's best shoes ever made, its durable, reliable, and a good investment.";
+            });
+            document.getElementById("k2").addEventListener("click",function() {
+                clear();
+                Ktart2.innerHTML = "Buy Kobe Protos. Available here: https://stockx.com/search?s=kobe+protos";
+            });
+</script>
+
+
     </div>
 
     <footer class="footer">
@@ -214,7 +446,7 @@ cursor: pointer;
         <h1 style="color: rgb(245, 191, 28); font-size: 24px; margin: 0;">
             © 2025 THE BLACK MAMBA: 20 YEAR LEGACY. All rights reserved.
         </h1>
-        <button onclick="window.location.href='project4s.html'"; class="homebutton">
+        <button onclick="window.location.href='index.html'"; class="homebutton">
             <div class="navtext">Home page</div>
            
         </button>
