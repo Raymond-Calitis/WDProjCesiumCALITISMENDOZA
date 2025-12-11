@@ -72,12 +72,13 @@
             width: 100%;
             height: 100vh;
             background-image: url("https://github.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/blob/main/images/KobeBackground.png?raw=true");
+            
             background-color: #3a3a3a; 
             background-size: cover;
             background-repeat: no-repeat; 
             background-position: center;
             background-attachment: fixed;
-            animation: background-zoom 3s ease-in-out infinite alternate;
+            animation: background-zoom 3s ease-in-out infinite alternate, backgroundblur 3s ease-in-out 1 forwards;
             z-index: 1;
         }
         
@@ -86,10 +87,23 @@
             0% 
             {
                 transform: scale(1);
+                
             }
             100% 
             {
                 transform: scale(1.02);
+                
+            }
+
+        }
+        @keyframes backgroundblur{
+            0% 
+            {
+                filter: blur(0px);
+            }
+            100% 
+            {
+                filter: blur(5px);
             }
         }
 
@@ -133,7 +147,7 @@
 
 
 
-    .homebutton{
+    .legacybutton{
 position: absolute; 
 left: 20px; 
 top: 15px; 
@@ -198,6 +212,214 @@ cursor: pointer;
 .navtext:hover{
     color: purple;
 }
+        .carousel 
+        {
+            width: calc(var(--img-width) * var(--visible-count));
+            overflow: hidden;
+            margin: 40px auto;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.03);
+        }
+
+        .track 
+        {
+            width: calc(var(--img-width) * 8);
+            display: flex;
+            animation: scroll var(--speed) linear infinite;
+        }
+
+        .track img 
+        {
+            width: var(--img-width);
+            height: 380px;
+            flex: 0 0 auto;
+            display: block;
+            object-fit: cover;
+            image-rendering: center;
+            border-radius: 10px;
+            border: 4px solid transparent;
+            border-color: rgb(77, 77, 77);
+        }
+
+        @keyframes scroll 
+        {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+        }
+
+        @media (prefers-reduced-motion: reduce) 
+        { 
+            .track { animation: none; } 
+        } 
+
+        @media (max-width: 900px) 
+        { 
+            :root { --img-width: 200px; --visible-count: 3; } 
+            .carousel { width: calc(var(--img-width) * var(--visible-count)); } 
+        }   
+
+        :root 
+        {
+            --img-width: 350px;
+            --visible-count: 4;
+            --speed: 20s;
+        }
+
+        .centerguy
+        {
+            align-content: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: calc(100vh - 240px);
+        }
+.legacy{
+    font-size:25vh;
+    font-weight:bold;
+    font-family: sans-serif;
+    color:black;
+    animation-name:legacy;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-direction:alternate;
+    animation-play-state:running;
+    
+}
+@keyframes legacy{
+from{color:black}
+to{color:green}
+
+}
+.imagestyle{
+    border-radius:100px;
+    animation-name:imagestyle;
+    animation-duration:3s;
+    animation-iteration-count:1;
+    animation-timing-function:ease-in-out;
+    animation-play-state:running;
+    animation-fill-mode:forwards;
+}
+@keyframes imagestyle{
+    from {opacity: 0; border-radius:0px;}
+    to {opacity: 1; border-radius:100px;}
+}
+.s1{
+border-radius:50%;
+color:orange;
+width:200px;
+height:200px;
+border:none;
+display:flex;
+background-color:purple;
+position:absolute;
+top:1400px;
+left:25%;
+justify-content:center;
+}
+.s2{
+border-radius:50%;
+color:orange;
+width:200px;
+height:200px;
+border:none;
+display:flex;
+background-color:purple;
+position:absolute;
+top:1400px;
+left:37.5%;
+justify-content:center;
+}
+.s3{
+border-radius:50%;
+color:orange;
+width:200px;
+height:200px;
+border:none;
+display:flex;
+background-color:purple;
+position:absolute;
+top:1400px;
+left:62.5%;
+justify-content:center;
+}
+.s4{
+border-radius:50%;
+font-size:15px;
+color:orange;
+width:200px;
+height:200px;
+border:none;
+display:flex;
+background-color:purple;
+position:absolute;
+top:1400px;
+left:75%;
+justify-content:center;
+}
+.label{
+    font-size:40px;
+    font-weight:bold;
+    color:black;
+    font-family:sans-serif;
+    margin:auto;
+    position:absolute;
+    top:1000px;
+    left:0%;
+   
+    transition: color 1.5s ease;
+    
+
+}
+.label:hover{
+    color:red;
+}
+
+
+.ball1{
+position:absolute;
+top:1400px;
+left:25%;
+justify-content:center;
+z-index: 10;
+width:200px;
+height:200px;
+}
+.ball2{
+position:absolute;
+top:1400px;
+left:37.5%;
+justify-content:center;
+z-index: 10;
+width:200px;
+height:200px;
+}
+.ball3{
+position:absolute;
+top:1400px;
+left:62.5%;
+justify-content:center;
+z-index: 10;
+width:200px;
+height:200px;
+}
+.ball4{
+position:absolute;
+top:1400px;
+left:75%;
+justify-content:center;
+z-index: 10;
+width:200px;
+height:200px;
+}
+.textspacing{
+    margin:auto;
+}
+
     </style>
 </head>
 
@@ -210,9 +432,61 @@ cursor: pointer;
     
     <!-- Testing -->
     <div class="content">
-        <h2>Test Content</h2>
-        <p>Background</p>
+         <button id="s1"; class="s1"><h1 class="textspacing" >Start</h1></button>
+        <button id="s2"; class="s2"><h1 class="textspacing" >Mid career</h1></button>
+        <button id="s3"; class="s3"><h1 class="textspacing">End career</h1>></button>
+        <button id="s4"; class="s4"><h1 class="textspacing">Retirement</h1></button>
+        <h3 id="Start1"; class = "label"></h3>
+        <h3 id="Start2"; class = "label"></h3>
+        <h3 id="Start3"; class = "label"></h3>
+        <h3 id="Start4"; class = "label"></h3>
+        
+
+    
+        <script>
+            function clear(){
+                Start1.innerHTML = "";
+                Start2.innerHTML = "";
+                Start3.innerHTML = "";
+                Start4.innerHTML = "";
+            }
+            document.getElementById("s1").addEventListener("click",function() {
+                clear();
+                Start1.innerHTML = "Kobe Bryant, drafted by the Hornets on June 26 1996. Kobe was a versatile player who was used to playing basically all positions because of his highschool career. Scouts said that he was the type of player who could get shots off from anywhere, and his basketball IQ was off the charts. After being drafted to the Hornets, he was traded immediately to the Los Angeles Lakers(craziest fumble oat). He was just 17 entering the league, and he averaged 7.6 points per game. He won the Dunk contest in 1997, and by his second season, he suddenly turned into an NBA Allstar while averaging 15 ppg.";
+            });
+            document.getElementById("s2").addEventListener("click",function() {
+                clear();
+                Start2.innerHTML = "Kobe won three consecutive championships, 2000, 2001, 2002, with the help of the Shaquile O'Neal. During 2003, he averaged 30ppg. During 2004, they went to the championships again, but lost against the Pistons. Shaq gets traded to the Miami Heat, leaving Kobe alone without his iconic duo. Kobe scored the second highest points in a game with 81 points against the Toronto Raptors, which was a crazy feat. During the 2008 era, they Lakers built around Kobe, using players like Pau Gasol, which helped them reach the championship stage once again. They lose to the Celtics in 2008, beat the Magic in 2009, and beat the Celtics in 2010. Kobe was finals MVP during the 2009 and 2010 championships.";
+            });
+            document.getElementById("s3").addEventListener("click",function() {
+                clear();
+                Start3.innerHTML = "Kobe got injured in 2013, got knee injuries, tore his rotator cuff, which led him to miss a lot of time. 2015-2016, was Kobe's fairwell tour, because he himself had announced that he would retire during those years. The Lakers finished 17-65(pretty bad), but it was a decent fairwell tour season.";
+            });
+            document.getElementById("s4").addEventListener("click",function() {
+                clear();
+                Start4.innerHTML = "Kobe had one of the most Iconic retirement games of all time. He was against the Utah Jazz, and he scored 60 points. The lakers won 101-96, and this game marked the end of an era, the end of Kobe's career.";
+            });
+        </script>
+        <h1 class="legacy">MAMBA'S LEGACY</h1>
     </div>
+
+<div class="centerguy">
+    <div class="carousel">
+        <div class="track">
+            <img src="https://github.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/blob/main/images/3060.jpg?raw=true"; class="imagestyle">
+            <img src="https://github.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/blob/main/images/kobe-shaq-lakers.png?raw=true"; class="imagestyle">
+            <img src="https://github.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/blob/main/images/kobe-bryant-olympics-2008.jpg?raw=true"; class="imagestyle">
+            <img src="https://github.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/blob/main/images/legacy.webp?raw=true"; class="imagestyle">
+
+            <!-- for dupe -->
+            <img src="https://github.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/blob/main/images/3060.jpg?raw=true"; class="imagestyle">
+            <img src="https://github.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/blob/main/images/kobe-shaq-lakers.png?raw=true"; class="imagestyle">
+            <img src="https://github.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/blob/main/images/kobe-bryant-olympics-2008.jpg?raw=true"; class="imagestyle">
+            <img src="https://github.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/blob/main/images/legacy.webp"; class="imagestyle">
+        </div>
+    </div>
+</div>
+
 
     <footer class="footer">
 
@@ -220,18 +494,18 @@ cursor: pointer;
         <h1 style="color: rgb(245, 191, 28); font-size: 24px; margin: 0;">
             © 2025 THE BLACK MAMBA: 20 YEAR LEGACY. All rights reserved.
         </h1>
-        <button onclick="window.location.href='project4s.html'"; class="homebutton">
-            <div class="navtext">Home page</div>
+        <button onclick="window.location.href='merchandise.html'"; class="merchandisebutton">
+            <div class="navtext">Merchandise</div>
            
         </button>
         <button onclick="window.location.href='biography.html'"; class="biographybutton">
            <div class="navtext">Biography</div>
         </button>
-        <button onclick="window.location.href='statlines.html'"; class="statlinesbutton">
-           <div class="navtext">Statlines</div>
+        <button onclick="window.location.href='stat-lines.html'"; class="statlinesbutton">
+           <div class="navtext">Stat-lines</div>
         </button>
-        <button onclick="window.location.href='merchandise.html'"; class="merchandisebutton">
-           <div class="navtext">Merchandise</div>
+        <button onclick="window.location.href='index.html'"; class="legacybutton">
+           <div class="navtext">Home page</div>
         </button>
         
     </footer>
