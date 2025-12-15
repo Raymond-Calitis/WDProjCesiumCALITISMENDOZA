@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE BLACK MAMBA: 20 YEAR LEGACY</title>
+    <title>THE BLACK MAMBA:20 YEAR LEGACY</title>
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Raymond-Calitis/Q2CS3_CALITIS_MENDOZA_Project/main/images/Logo.png">
 
     <style>
@@ -15,6 +15,7 @@
             min-height: 100%;
             width: 100%;
             font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
         }
 
         /* Header */
@@ -25,10 +26,17 @@
             padding: 20px;
             text-align: center;
             position: fixed;
-            top: 0;
+            top: -150px;
             left: 0;
             width: 100%;
             z-index: 100;
+            animation: slideDown 1.5s ease forwards;
+        }
+
+        @keyframes slideDown 
+        {
+            from { top: -150px; opacity: 0; }
+            to { top: 0; opacity: 1; }
         }
 
         .main-title 
@@ -38,12 +46,12 @@
             font-family: "Helvetica", sans-serif;
             margin: 0;
             color: rgb(255, 255, 255);
-            transition: color 1.5s ease;
+            transition: color 2s ease;
         }
 
         .main-title:hover 
         {
-            color: rgb(125, 14, 156);
+            color: rgb(218, 199, 56);
         }
 
         /* Background */
@@ -93,13 +101,22 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 120px;
+            padding-top: 150px;
             padding-bottom: 100px; 
             gap: 20px;
             position: relative;
             z-index: 10;
             max-width: 1200px;
             margin: 0 auto;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: floatUp 2s ease forwards;
+            animation-delay: 2s;
+        }
+
+        @keyframes floatUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .top-row 
@@ -117,7 +134,6 @@
             flex-direction: column;
             align-items: center;
             width: 45%;
-            height: 50%;
         }
 
         .image-box img 
@@ -134,15 +150,23 @@
             font-weight: bold;
             color: black;
             text-align: center;
+            background: rgba(255,255,255,0.15);
+            border-radius: 12px;
+            backdrop-filter: blur(80px);
+            -webkit-backdrop-filter: blur(80px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 5px;
         }
 
         .info-box 
         {
             width: 100%;
             min-height: 200px;
-            background: rgba(255,255,255,0.15);
+            background: rgba(255, 255, 255, 0.3);
             border-radius: 12px;
-            backdrop-filter: blur(50px);
+            backdrop-filter: blur(80px);
+            -webkit-backdrop-filter: blur(80px);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -150,7 +174,11 @@
             font-weight: bold;
             padding: 20px;
             text-align: center;
+            color: black;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
+
 
         .button-row 
         {
@@ -201,6 +229,10 @@
             bottom: 0;
             text-align: center;
             z-index: 90;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: floatUp 2s ease forwards;
+            animation-delay: 2.5s;
         }
 
         @media (max-width: 900px) {
@@ -234,17 +266,18 @@
     <div class="centerguy">
         <div class="top-row">
             <div class="image-box">
-                <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/kobe1.avif" alt="Kobe 1">
-                <div class="image-name">Kobe Bryant</div>
+                <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/img1.png" alt="Kobe 1">
+                <div class="image-name">Raymond Calitis</div>
             </div>
             <div class="image-box">
-                <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/KobeBackground.png" alt="Kobe 2">
-                <div class="image-name">Gianna Bryant</div>
+                <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/img2.png" alt="Kobe 2">
+                <div class="image-name">Juan Mendoza</div>
             </div>
         </div>
 
         <div class="info-box">
-            Kobe Bryant was born on August 23, 1978, in Philadelphia, Pennsylvania, to Joe and Pamela Bryant and grew up with two older sisters, Sharia and Shaya. He spent part of his childhood in Italy while his father played professional basketball there. Kobe married Vanessa Laine in 2001, and together they had four daughters: Natalia, Gianna, Bianka, and Capri. Over his 20-year career with the Los Angeles Lakers, he won five NBA championships, earned two Finals MVPs, and was an 18-time All-Star. Tragically, Kobe and his daughter Gianna died in a helicopter crash on January 26, 2020, leaving behind a loving family and a lasting legacy.
+            We chose this project to celebrate and document the life and legacy of Kobe Bryant, highlighting his achievements, impact on basketball, and influence beyond the sport. It combines visual storytelling with interactive elements to engage users and provide an informative, memorable experience about his career and personal life. <br><br>
+            For More Information, Contact Us at: b2029raccalitis@pshs.edu.ph or b2029jmfmendoza@pshs.edu.ph.
         </div>
 
         <div class="button-row">
