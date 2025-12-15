@@ -1,184 +1,278 @@
+make this have the same button layout
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THE BLACK MAMBA:20 YEAR LEGACY</title>
-<link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Raymond-Calitis/Q2CS3_CALITIS_MENDOZA_Project/main/images/Logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE BLACK MAMBA:20 YEAR LEGACY</title>
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Raymond-Calitis/Q2CS3_CALITIS_MENDOZA_Project/main/images/Logo.png">
 
-<style>
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
-}
+    <style>
+        html, body 
+        {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
 
-/* Header */
-.header {
-    background: black;
-    padding: 20px;
-    text-align: center;
-    position: fixed;
-    top: -150px;
-    width: 100%;
-    z-index: 100;
-    animation: slideDown 1.5s ease forwards;
-}
+        /* For header */
+        .header 
+        {
+            font-family: 'Roboto', sans-serif;
+            background: black;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            animation: slideDown 2s ease-in-out;
+        }
+        
+        @keyframes slideDown 
+        {
+            from 
+            {
+                top: -100px;
+            }
+            to 
+            {
+                top: 0;
+            }
+        }
+        
+        .main-title 
+        {
+            font-size: 50px;
+            font-weight: bold;
+            font-family: "Helvetica", sans-serif; 
+            margin: 0;
+            color: rgb(255, 255, 255);
+            transition: color 1.5s ease;
+        }
 
-@keyframes slideDown {
-    from { top: -150px; opacity: 0; }
-    to { top: 0; opacity: 1; }
-}
+        .main-title:hover 
+        {
+            color: rgb(218, 199, 56);
+        }
 
-.main-title {
-    font-size: 50px;
+        /* For Body */
+        body 
+        {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .animatedbackground 
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-image: url("https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/KobeBackground.png");
+            background-color: #3a3a3a; 
+            background-size: cover;
+            background-repeat: no-repeat; 
+            background-position: center;
+            background-attachment: fixed;
+            animation: background-zoom 3s ease-in-out infinite alternate;
+            z-index: 1;
+        }
+        
+        @keyframes background-zoom 
+        {
+            0% 
+            {
+                transform: scale(1);
+            }
+            100% 
+            {
+                transform: scale(1.02);
+            }
+        }
+
+        /* For footer */
+        .footer {
+            background-color: rgb(0, 0, 0);
+            padding: 20px;
+            height: 60px;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            text-align: center;
+            z-index: 100;
+            animation: slideDown2 2s ease-in-out;
+        }
+        
+        @keyframes slideDown2 
+        {
+            from 
+            {
+                bottom: -100px;
+            }
+            to {
+
+                bottom: 0;
+            }
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding-top: 120px;
+            padding-bottom: 100px;
+        }
+
+.homebutton{
+position: absolute; 
+left: 20px; 
+top: 15px; 
+padding: 10px 15px; 
+font-size: 20px; 
+background-color: rgb(245, 191, 28); 
+color: black; 
+border: black; 
+border-radius: 5px; 
+cursor: pointer;
+
+    }
+
+    .merchandisebutton{
+position: absolute; 
+right: 50px; 
+top: 15px; 
+padding: 10px 15px; 
+font-size: 20px; 
+background-color: rgb(245, 191, 28); 
+color: black; 
+border: black; 
+border-radius: 5px; 
+cursor: pointer;
+
+    }
+
+    .biographybutton{
+position: absolute; 
+left: 500px; 
+top: 15px; 
+padding: 10px 15px; 
+font-size: 20px; 
+background-color: rgb(245, 191, 28); 
+color: black; 
+border: black; 
+border-radius: 5px; 
+cursor: pointer;
+
+    }
+
+    .legacybutton{
+position: absolute; 
+right: 500px; 
+top: 15px; 
+padding: 10px 15px; 
+font-size: 20px; 
+background-color: rgb(245, 191, 28); 
+color: black; 
+border: black; 
+border-radius: 5px; 
+cursor: pointer;
+
+    }
+.navtext{
+    font-size: 18px;
     font-weight: bold;
+    color: black;
     margin: 0;
-    color: white;
-    transition: color 1.5s ease;
-}
 
-.main-title:hover {
-    color: rgb(218, 199, 56);
 }
-
-/* Background */
-.animatedbackground {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: url("https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/KobeBackground.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    animation: background-zoom 3s ease-in-out infinite alternate;
-    z-index: 1;
-}
-
-@keyframes background-zoom {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.02); }
-}
-
-/* Content */
-.content {
-    position: relative;
-    z-index: 10;
-    text-align: center;
-    padding-top: 180px;
-    padding-bottom: 100px;
-}
-
-.kobesbutton {
-    border-radius: 50%;
-    font-size: 24px;
-    color: black;
-    width: 120px;
-    height: 120px;
-    display: block;
-    margin: 0 auto 20px auto;
-    transition: all 1.5s ease;
-}
-
-.kobesbutton:hover {
-    background-color: purple;
-    cursor: pointer;
-}
-
-#stats {
-    opacity: 0;
-    transition: opacity 1s ease;
-    margin-top: 20px;
-    font-size: 24px;
-    color: black;
-}
-
-#stats.show {
-    opacity: 1;
-}
-
-.imagecenter {
-    display: block;
-    margin: 20px auto;
-    width: 50%;
-    height: auto;
-    border-radius: 12px;
-}
-
-/* Buttons Row */
-.button-row {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 40px auto 0;
-    flex-wrap: wrap;
-}
-
-.button-row button {
-    padding: 10px 15px;
-    font-size: 20px;
-    background-color: rgb(245, 191, 28);
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.button-row button:hover {
+.navtext:hover{
     color: purple;
 }
-
-/* Footer */
-.footer {
-    background-color: black;
-    padding: 20px;
-    width: 100%;
-    text-align: center;
-    color: rgb(245, 191, 28);
-    font-size: 18px;
-    position: relative;
-    z-index: 10;
+.imagecenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+    height: 50%;
+    border-radius: 100px;
 }
-</style>
+#stats{
+opacity: 0;
+transition: opacity 1s ease;
+}
+#stats.show{
+opacity:1;
+}
+.kobesbutton{
+border-radius:50%;
+   display:block;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:24px;
+    color:black;
+    width:120px;
+    height: 120px;
+    transition: all 1.5s ease;
+    animation-name: button1;
+    animation-duration: 2s;
+    animation-fill-mode:forwards;
+}
+.kobesbutton:hover{
+    background-color: purple;
+    cursor:pointer;
+}
+    </style>
 </head>
+
 <body>
-
-<header class="header">
-    <a href="about us.html" style="position: absolute; top: 0; left: 0; height: 100%; display: flex; align-items: center; padding: 0 10px; z-index: 200;">
-        <img src="https://raw.githubusercontent.com/Raymond-Calitis/Q2CS3_CALITIS_MENDOZA_Project/main/images/about us.png" alt="Logo" style="height: 100%; cursor: pointer;">
-    </a>
-    <h1 class="main-title">STAT-LINES</h1>
-</header>
-
-<div class="animatedbackground"></div>
-
-<div class="content">
-    <button onclick="textshow()" class="kobesbutton">Stats</button>
-    <h2 id="stats">
-        Kobe Bryant's Career Stats:<br>
-        Points per Game: 25.0<br>
-        Rebounds per Game: 5.2<br>
-        Assists per Game: 4.7
-    </h2>
-    <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/refs/heads/main/images/230131131712-01-kobe-bryant-mvp-jersey-auction.jpg" class="imagecenter">
-
-    <div class="button-row">
-        <button onclick="window.location.href='index.html'">Home Page</button>
-        <button onclick="window.location.href='biography.html'">Biography</button>
-        <button onclick="window.location.href='legacy.html'">Legacy</button>
-        <button onclick="window.location.href='merchandise.html'">Merchandise</button>
+    <header class="header">
+        <a href="about us.html" style="position: absolute; top: 0; left: 0; height: 100%; width: auto; display: flex; align-items: center; padding: 0 10px; z-index: 200;">
+            <img src="https://raw.githubusercontent.com/Raymond-Calitis/Q2CS3_CALITIS_MENDOZA_Project/main/images/about us.png" 
+                alt="Logo" 
+                style="height: 100%; cursor: pointer;">
+        </a>
+        <h1 class="main-title">STAT-LINES</h1>
+    </header>
+        
+    <div class="animatedbackground"></div>
+    <script src="stat-lines.js"></script>
+    <!-- Testing -->
+    <div class="content">
+        <button onclick="textshow()" class = "kobesbutton">Stats</button>
+      
+        <h2 id="stats" style="color: black; font-size: 40px; margin:20px; ">Kobe Bryant's Career Stats: <br>Points per Game: 25.0 <br> Rebounds per Game: 5.2 <br> Assists per Game: 4.7</h2>
+    
+        
+        <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/refs/heads/main/images/230131131712-01-kobe-bryant-mvp-jersey-auction.jpg" class = "imagecenter" >
     </div>
-</div>
 
-<footer class="footer">
-    © 2025 THE BLACK MAMBA: 20 YEAR LEGACY. All rights reserved.
-</footer>
+    <footer class="footer">
 
-<script src="stat-lines.js"></script>
+
+        <h1 style="color: rgb(245, 191, 28); font-size: 24px; margin: 0;">
+            © 2025 THE BLACK MAMBA: 20 YEAR LEGACY. All rights reserved.
+        </h1>
+        <button onclick="window.location.href='index.html'"; class="homebutton">
+            <div class="navtext">Home page</div>
+           
+        </button>
+        <button onclick="window.location.href='biography.html'"; class="biographybutton">
+           <div class="navtext">Biography</div>
+        </button>
+        <button onclick="window.location.href='legacy.html'"; class="legacybutton">
+           <div class="navtext">Legacy</div>
+        </button>
+        <button onclick="window.location.href='merchandise.html'"; class="merchandisebutton">
+           <div class="navtext">Merchandise</div>
+        </button>
+        
+    </footer>
 </body>
 </html>
