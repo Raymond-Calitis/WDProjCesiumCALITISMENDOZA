@@ -71,7 +71,7 @@
             left: 0;
             width: 100%;
             height: 100vh;
-            background-image: url("https://github.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/blob/main/images/KobeBackground.png?raw=true");
+            background-image: url("https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/KobeBackground.png");
             background-color: #3a3a3a; 
             background-size: cover;
             background-repeat: no-repeat; 
@@ -193,6 +193,39 @@ cursor: pointer;
 .navtext:hover{
     color: purple;
 }
+.imagecenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+    height: 50%;
+    border-radius: 100px;
+}
+#stats{
+opacity: 0;
+transition: opacity 1s ease;
+}
+#stats.show{
+opacity:1;
+}
+.kobesbutton{
+border-radius:50%;
+   display:block;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:24px;
+    color:black;
+    width:120px;
+    height: 120px;
+    transition: all 1.5s ease;
+    animation-name: button1;
+    animation-duration: 2s;
+    animation-fill-mode:forwards;
+}
+.kobesbutton:hover{
+    background-color: purple;
+    cursor:pointer;
+}
     </style>
 </head>
 
@@ -202,11 +235,15 @@ cursor: pointer;
     </header>
         
     <div class="animatedbackground"></div>
-    
+    <script src="stat-lines.js"></script>
     <!-- Testing -->
     <div class="content">
-        <h2>Test Content</h2>
-        <p>Background</p>
+        <button onclick="textshow()" class = "kobesbutton">Stats</button>
+      
+        <h2 id="stats" style="color: black; font-size: 40px; margin:20px; ">Kobe Bryant's Career Stats: <br>Points per Game: 25.0 <br> Rebounds per Game: 5.2 <br> Assists per Game: 4.7</h2>
+    
+        
+        <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/refs/heads/main/images/230131131712-01-kobe-bryant-mvp-jersey-auction.jpg" class = "imagecenter" >
     </div>
 
     <footer class="footer">
@@ -215,7 +252,7 @@ cursor: pointer;
         <h1 style="color: rgb(245, 191, 28); font-size: 24px; margin: 0;">
             © 2025 THE BLACK MAMBA: 20 YEAR LEGACY. All rights reserved.
         </h1>
-        <button onclick="window.location.href='project4s.html'"; class="homebutton">
+        <button onclick="window.location.href='index.html'"; class="homebutton">
             <div class="navtext">Home page</div>
            
         </button>
