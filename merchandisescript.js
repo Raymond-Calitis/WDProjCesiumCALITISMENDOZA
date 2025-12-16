@@ -13,7 +13,7 @@
             });
             document.getElementById("g2").addEventListener("click",function() {
                 clear();
-                Gtart2.innerHTML = "Buy Kobe Grinches for $899.00. Available here: https://stockx.com/nike-kobe-6-protro-grinch?msockid=039055529ec56fbd1579404f9fd16ead";
+                Gtart2.innerHTML = "Buy Kobe Grinches here: https://stockx.com/nike-kobe-6-protro-grinch?msockid=039055529ec56fbd1579404f9fd16ead";
             });
             document.getElementById("k1").addEventListener("click",function() {
                 clear();
