@@ -130,7 +130,7 @@
         {
             --img-width: 350px;
             --visible-count: 4;
-            --speed: 24s;
+            --speed: 10s;
         }
 
         .carousel 
@@ -147,7 +147,7 @@
 
         .track 
         {
-            width: calc(var(--img-width) * 8);
+            width: calc(var(--img-width) * 16);
             display: flex;
             animation: scroll var(--speed) linear infinite;
         }
@@ -164,11 +164,17 @@
             border: 4px solid rgb(77, 77, 77);
         }
 
-        @keyframes scroll 
-        {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
+        @keyframes scroll {
+            from 
+            {
+                transform: translateX(0);
+            }
+            to 
+            {
+                transform: translateX(calc(-1 * var(--img-width) * 8));
+            }
         }
+
 
         @media (prefers-reduced-motion: reduce) 
         {
@@ -252,16 +258,28 @@
             <div class="carousel">
                 <div class="track">
                     <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/kobefadeaway.gif">
+                    <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/merchandise.png">
                     <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/kobegoingcrazy.gif">
+                    <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/biography.webp">
                     <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/kobemomentsbeforedeath.gif">
+                    <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/statlines.png">
                     <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/ilovekobe.gif">
+                    <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/legacy.webp">
                     <!-- for dupe -->
                     <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/kobefadeaway.gif">
+                    <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/merchandise.png">
                     <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/kobegoingcrazy.gif">
+                    <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/biography.webp">
                     <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/kobemomentsbeforedeath.gif">
+                    <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/statlines.png">
                     <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/ilovekobe.gif">
+                    <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/legacy.webp">
                 </div>
             </div>
+
+
+
+
 
             <div class="button-row">
                 <button class="merchandisebutton nav-button">
