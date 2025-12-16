@@ -6,6 +6,7 @@
                 Ktart2.innerHTML = "";
                 
             }
+            
       document.getElementById("g1").addEventListener("click",function() {
                 clear();
                 Gtart1.innerHTML = "Kobe grinches, known for its green colorway, amazing traction, and an overall comfortable design. This shoe is known for its supreme performance and its a must have for any basketball player who wants the best of the best.";

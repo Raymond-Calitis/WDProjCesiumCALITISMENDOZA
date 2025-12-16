@@ -72,12 +72,13 @@
             width: 100%;
             height: 100vh;
             background-image: url("https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/KobeBackground.png");
+            
             background-color: #3a3a3a; 
             background-size: cover;
             background-repeat: no-repeat; 
             background-position: center;
             background-attachment: fixed;
-            animation: background-zoom 3s ease-in-out infinite alternate;
+            animation: background-zoom 3s ease-in-out infinite alternate, backgroundblur 3s ease-in-out 1 forwards;
             z-index: 1;
         }
         
@@ -86,13 +87,25 @@
             0% 
             {
                 transform: scale(1);
+                
             }
             100% 
             {
                 transform: scale(1.02);
+                
+            }
+
+        }
+        @keyframes backgroundblur{
+            0% 
+            {
+                filter: blur(0px);
+            }
+            100% 
+            {
+                filter: blur(5px);
             }
         }
-
         /* For footer */
         .footer {
             background-color: rgb(0, 0, 0);
