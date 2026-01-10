@@ -43,3 +43,18 @@ JavaScript will be incorporated into the homepage, where you can hover over imag
 
 ### Merchandise Page Wireframe
 <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/WireframePage5.png" width="400" alt="Merchandise Page Wireframe">
+
+# Webpages with data collection:
+
+## Sign in page:
+
+In this page you can select your own username and you can choose your favorite jersey number.
+
+<img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/sign_in.png" width="400" alt="Merchandise Page Wireframe">
+
+## Trivia Page:
+
+In this page you will have to answer trivia questions about Kobe.
+
+
+## Score. Page:
