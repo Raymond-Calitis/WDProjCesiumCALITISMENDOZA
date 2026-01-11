@@ -57,4 +57,6 @@ In this page you can select your own username and you can choose your favorite j
 In this page you will have to answer trivia questions about Kobe.
 
 
-## Score. Page:
+
+
+## Score Page:
