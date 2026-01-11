@@ -50,7 +50,7 @@ JavaScript will be incorporated into the homepage, where you can hover over imag
 
 In this page you can select your own username and you can choose your favorite jersey number.
 
-<img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/sign_in.png" width="400" alt="Merchandise Page Wireframe">
+<img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/sign_in.png" width="400" alt="Sign in Page Wireframe">
 
 ## Trivia Page:
 
@@ -60,3 +60,6 @@ In this page you will have to answer trivia questions about Kobe.
 
 
 ## Score Page:
+This page will show you how many of the trivia questions you got right.
+
+<img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/score.png" width="400" alt="Score Page Wireframe"
