@@ -27,6 +27,8 @@ This page will show most of Kobe’s popular shoes, shirts, and other merchandis
 
 JavaScript will be incorporated into the homepage, where you can hover over images and the footer and it will expand. It will also be incorporated in the Stat-line page, allowing you to click on an image to reveal the statlines. In the NBA Legacy Page, there would be icons where when you click on them you can see timestamps of Kobe’s achievements. In the merchandise section, the images will be hoverable, and when you click on them, it would pop up a description of that image.
 
+For the Webpages with data collection:
+JavaScript will be used on these webpages to make the buttons have animations when being interacted with. We will also use JS for animation purposes. JavaScript will also be used in the trivia game to display results and to add interactivity to the buttons. It will be used in the sign-in page for button interactivity, too.
 ## Website Wireframes
 
 ### Home Page Wireframe
@@ -56,6 +58,7 @@ In this page you can select your own username and you can choose your favorite j
 
 In this page you will have to answer trivia questions about Kobe.
 
+<img src="https://github.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/blob/main/images/Copy%20of%20Copy%20of%20WDProjCesiumCALITISMENDOZA.png" width="400" alt="Sign in Page Wireframe">
 
 
 
