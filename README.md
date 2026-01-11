@@ -62,4 +62,4 @@ In this page you will have to answer trivia questions about Kobe.
 ## Score Page:
 This page will show you how many of the trivia questions you got right.
 
-<img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/score.png" width="400" alt="Score Page Wireframe"
+<img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/score.png" width="400" alt="Score Page Wireframe">
