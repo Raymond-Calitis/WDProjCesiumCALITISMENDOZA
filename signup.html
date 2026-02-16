@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP - BLACK MAMBA</title>
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Raymond-Calitis/Q2CS3_CALITIS_MENDOZA_Project/main/images/Logo.png">
+    <style>
+        /* Global Styles */
+        html, body 
+        {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header 
+        {
+            font-family: "Helvetica", sans-serif;
+            background: black;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            top: -150px;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            animation: slideDown 2.5s ease forwards;
+        }
+
+        @keyframes slideDown 
+        {
+            from { top: -150px; opacity: 0; }
+            to { top: 0; opacity: 1; }
+        }
+
+        .main-title 
+        {
+            font-size: 50px;
+            font-weight: bold;
+            font-family: "Helvetica", sans-serif;
+            margin: 0;
+            color: rgb(255, 255, 255);
+            transition: color 2.5s ease;
+        }
+
+        .main-title:hover 
+        {
+            color: rgb(218, 199, 56);
+        }
+
+        /* Background */
+        .animatedbackground 
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-image: url("https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/KobeBackground.png");
+            background-color: #3a3a3a;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            animation: background-zoom 3s ease-in-out infinite alternate;
+            z-index: 1;
+        }
+
+        @keyframes background-zoom 
+        {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.02); }
+        }
+
+        /* Header clickable image */
+        .header-logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            z-index: 200;
+        }
+
+        .header-logo img {
+            height: 100%;
+            cursor: pointer; 
+        }
+
+        /* Sign Up Box */
+        .signup-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding-top: 120px;
+            padding-bottom: 150px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .signup-box {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            width: 400px;
+            color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .signup-box h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: rgb(245, 191, 28);
+            font-size: 32px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: rgb(245, 191, 28);
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #333;
+            color: white;
+            font-size: 16px;
+        }
+        
+        input:focus {
+            outline: 2px solid rgb(245, 191, 28);
+        }
+        
+        #saveBtn {
+            width: 100%;
+            padding: 12px;
+            background: rgb(245, 191, 28);
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        #saveBtn:hover {
+            background: rgb(255, 215, 0);
+        }
+        
+        .saved-data {
+            margin-top: 20px;
+            padding: 15px;
+            background: #333;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .saved-data.show {
+            display: block;
+        }
+        
+        .saved-data h3 {
+            color: rgb(245, 191, 28);
+            margin-bottom: 10px;
+        }
+
+        /* BUTTONS - EXACTLY FROM YOUR REFERENCE */
+        .button-row 
+        {
+            display: flex;
+            justify-content: space-evenly;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto; 
+            flex-wrap: wrap;
+            gap: 15px;
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+        }
+
+        .merchandisebutton,
+        .legacybutton,
+        .biographybutton,
+        .statlinesbutton,
+        .homepage
+        {
+            padding: 10px 15px;
+            font-size: 20px;
+            background-color: rgb(245, 191, 28);
+            color: black;
+            border: black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .navtext 
+        {
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+            margin: 0;
+        }
+
+        .navtext:hover 
+        {
+            color: purple;
+        }
+
+        /* Footer */
+        .footer 
+        {
+            background-color: rgb(0, 0, 0);
+            padding: 20px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+            z-index: 90;
+        }
+
+        .footer h1 {
+            color: rgb(245, 191, 28);
+            font-size: 24px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER - KEPT EXACTLY -->
+    <header class="header">
+        <a href="about us.html" class="header-logo">
+            <img src="https://raw.githubusercontent.com/Raymond-Calitis/Q2CS3_CALITIS_MENDOZA_Project/main/images/about us.png" alt="Logo">
+        </a>
+        <h1 class="main-title">SIGN UP</h1>
+    </header>
+
+    <!-- Background -->
+    <div class="animatedbackground"></div>
+
+    <!-- Sign Up Box -->
+    <div class="signup-container">
+        <div class="signup-box">
+            <h1>JOIN US NOW!!!</h1>
+            
+            <div class="input-group">
+                <label>USERNAME:</label>
+                <input type="text" id="username" placeholder="Enter username">
+            </div>
+            
+            <div class="input-group">
+                <label>FAV JERSEY NUMBER:</label>
+                <input type="number" id="jersey" placeholder="Enter number">
+            </div>
+            
+            <button id="saveBtn">SAVE TO COMPUTER</button>
+            
+            <div id="savedData" class="saved-data">
+                <h3>Saved Info:</h3>
+                <p id="displayUsername"></p>
+                <p id="displayJersey"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BUTTONS - EXACTLY FROM YOUR REFERENCE -->
+    <div class="button-row">
+        <button class="merchandisebutton" onclick="window.location.href='merchandise.html'"><div class="navtext">Merchandise</div></button>
+        <button class="biographybutton" onclick="window.location.href='biography.html'"><div class="navtext">Biography</div></button>
+        <button class="statlinesbutton" onclick="window.location.href='stat-lines.html'"><div class="navtext">Stat-lines</div></button>
+        <button class="legacybutton" onclick="window.location.href='legacy.html'"><div class="navtext">NBA Legacy</div></button>
+        <button class="homepage" onclick="window.location.href='index.html'"><div class="navtext">Home Page</div></button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h1>© 2025 THE BLACK MAMBA: 20 YEAR LEGACY. ALL RIGHTS RESERVED.</h1>
+    </footer>
+
+    <script src="signup.js"></script>
+</body>
+</html>
