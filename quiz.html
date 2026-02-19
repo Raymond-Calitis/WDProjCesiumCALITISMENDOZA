@@ -189,7 +189,26 @@
             top:3600px;
             transform: translate(50%, -50%);
         }
-      
+               .score-box {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            width: 700px;
+            height:400px;
+            color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            display:inline;
+            position:absolute;
+            right:50%;
+            top:4200px;
+            transform: translate(50%, -50%);
+        }
+        .score-text {
+            text-align: center;
+            font-size: 100px;
+            color: white;
+            font-weight: bold;
+        }
       
         .quiz-box h1 {
             text-align: center;
@@ -394,7 +413,9 @@ input[type="radio"] {
                  <h1>Which NBA team drafted Kobe Bryant?</h1>
             </div>
         </div>
-       
+       <div class="score-box">
+         <h1 id="score" class="score-text"></h1>
+       </div>
            
 
     <!-- BUTTONS - EXACTLY FROM YOUR REFERENCE -->
