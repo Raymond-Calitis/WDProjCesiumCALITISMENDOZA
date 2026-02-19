@@ -20,5 +20,5 @@ let q5 = document.querySelector('input[type="radio"][name="Option4"]:checked')
 if (q5 && q5.value  === 'correct') {
     score++
 }else(score=score)
-alert("Your score is: " + score + "/5")
+document.getElementById("score").textContent = "Your score is: " + score + "/5";
 }
