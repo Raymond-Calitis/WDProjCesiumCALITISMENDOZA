@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE BLACK MAMBA:20 YEAR LEGACY</title>
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Raymond-Calitis/Q2CS3_CALITIS_MENDOZA_Project/main/images/Logo.png">
-
     <style>
         html, body 
         {
@@ -13,6 +12,12 @@
             padding: 0;
             height: 100%;
             width: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         /* For header */
@@ -29,7 +34,7 @@
             z-index: 100;
             animation: slideDown 2s ease-in-out;
         }
-        
+
         @keyframes slideDown 
         {
             from 
@@ -41,7 +46,7 @@
                 top: 0;
             }
         }
-        
+
         .main-title 
         {
             font-size: 50px;
@@ -63,7 +68,7 @@
             margin: 0;
             padding: 0;
         }
-        
+
         .animatedbackground 
         {
             position: fixed;
@@ -80,8 +85,9 @@
             background-attachment: fixed;
             animation: background-zoom 3s ease-in-out infinite alternate, backgroundblur 3s ease-in-out 1 forwards;
             z-index: 1;
+            pointer-events: none;
         }
-        
+
         @keyframes background-zoom 
         {
             0% 
@@ -108,125 +114,88 @@
         }
 
         /* For footer */
-        .footer {
+        .footer 
+        {
             background-color: rgb(0, 0, 0);
             padding: 20px;
-            height: 60px;
             width: 100%;
             position: fixed;
             left: 0;
             bottom: 0;
             text-align: center;
-            z-index: 100;
+            z-index: 9999;
             animation: slideDown2 2s ease-in-out;
         }
         
+
+        .footer h1 {
+            color: rgb(245, 191, 28);
+            font-size: 24px;
+            margin: 0;
+        }
+
         @keyframes slideDown2 
         {
             from 
             {
-                bottom: -100px;
+                transform: translateY(100%);
             }
             to {
 
-                bottom: 0;
+                transform: translateY(0);
             }
         }
 
         .content {
             position: relative;
-            z-index: 10;
+            z-index: 30;
             color: rgb(0, 0, 0);
             text-align: center;
             padding-top: 120px;
             padding-bottom: 100px;
-
-
+            flex: 1;
         }
 
 
-.homebutton{
-    
-position: absolute; 
-right: 50px; 
-top: 15px; 
-padding: 10px 15px; 
-font-size: 20px; 
-background-color: rgb(245, 191, 28); 
-color: black; 
-border: black; 
-border-radius: 5px; 
-cursor: pointer;
+        /* Buttons */
+        .merchandisebutton,
+        .homepagebutton,
+        .biographybutton,
+        .statlinesbutton 
+        {
+            padding: 10px 15px;
+            font-size: 20px;
+            background-color: rgb(245, 191, 28);
+            color: black;
+            border: black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-    
+        .navtext 
+        {
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+            margin: 0;
+        }
 
-}
+        .navtext:hover 
+        {
+            color: purple;
+        }
 
-    .legacybutton{
-position: absolute; 
-left: 20px; 
-top: 15px; 
-padding: 10px 15px; 
-font-size: 20px; 
-background-color: rgb(245, 191, 28); 
-color: black; 
-border: black; 
-border-radius: 5px; 
-cursor: pointer;
-
-    }
-
-    .merchandisebutton{
-position: absolute; 
-right: 50px; 
-top: 15px; 
-padding: 10px 15px; 
-font-size: 20px; 
-background-color: rgb(245, 191, 28); 
-color: black; 
-border: black; 
-border-radius: 5px; 
-cursor: pointer;
-
-    }
-
-    .biographybutton{
-position: absolute; 
-left: 450px; 
-top: 15px; 
-padding: 10px 15px; 
-font-size: 20px; 
-background-color: rgb(245, 191, 28); 
-color: black; 
-border: black; 
-border-radius: 5px; 
-cursor: pointer;
-
-    }
-
-    .statlinesbutton{
-position: absolute; 
-right: 450px; 
-top: 15px; 
-padding: 10px 15px; 
-font-size: 20px; 
-background-color: rgb(245, 191, 28); 
-color: black; 
-border: black; 
-border-radius: 5px; 
-cursor: pointer;
-
-    }
-.navtext{
-    font-size: 18px;
-    font-weight: bold;
-    color: black;
-    margin: 0;
-
-}
-.navtext:hover{
-    color: purple;
-}
+        .button-row 
+        {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0;
+            z-index: 1000;
+            position: relative;
+        }
         .carousel 
         {
             width: calc(var(--img-width) * var(--visible-count));
@@ -290,179 +259,172 @@ cursor: pointer;
             justify-content: center;
             align-items: center;
             width: 100%;
-            height: calc(100vh - 240px);
-        }
-.legacy{
-    font-size:25vh;
-    font-weight:bold;
-    font-family: sans-serif;
-    color:black;
-    animation-name:legacy;
-    animation-duration:5s;
-    animation-iteration-count:infinite;
-    animation-timing-function:linear;
-    animation-direction:alternate;
-    animation-play-state:running;
-    
-}
-@keyframes legacy{
-from{color:black}
-to{color:green}
-
-}
-.imagestyle{
-    border-radius:100px;
-    animation-name:imagestyle;
-    animation-duration:3s;
-    animation-iteration-count:1;
-    animation-timing-function:ease-in-out;
-    animation-play-state:running;
-    animation-fill-mode:forwards;
-}
-@keyframes imagestyle{
-    from {opacity: 0; border-radius:0px;}
-    to {opacity: 1; border-radius:100px;}
-}
-.s1{
-border-radius:50%;
-color:orange;
-width:100px;
-height:100px;
-border:none;
-display:flex;
-background-color:purple;
-position:absolute;
-top:1000px;
-left:25%;
-justify-content:center;
-}
-.s2{
-border-radius:50%;
-color:orange;
-width:100px;
-height:100px;
-border:none;
-display:flex;
-background-color:purple;
-position:absolute;
-top:1000px;
-left:37.5%;
-justify-content:center;
-}
-.s3{
-border-radius:50%;
-color:orange;
-width:100px;
-height:100px;
-border:none;
-display:flex;
-background-color:purple;
-position:absolute;
-top:1000px;
-left:62.5%;
-justify-content:center;
-}
-.s4{
-border-radius:50%;
-font-size:15px;
-color:orange;
-width:100px;
-height:100px;
-border:none;
-display:flex;
-background-color:purple;
-position:absolute;
-top:1000px;
-left:75%;
-justify-content:center;
-}
-.label{
-    font-size:20px;
-    font-weight:bold;
-    color:black;
-    font-family:sans-serif;
-    margin:auto;
-    position:absolute;
-    top:800px;
-    left:0%;
-   
-    transition: color 1.5s ease;
-    
-
-}
-.label:hover{
-    color:green;
-}
-
-
-.ball1{
-position:absolute;
-top:1400px;
-left:25%;
-justify-content:center;
-z-index: 10;
-width:200px;
-height:200px;
-}
-.ball2{
-position:absolute;
-top:1400px;
-left:37.5%;
-justify-content:center;
-z-index: 10;
-width:200px;
-height:200px;
-}
-.ball3{
-position:absolute;
-top:1400px;
-left:62.5%;
-justify-content:center;
-z-index: 10;
-width:200px;
-height:200px;
-}
-.ball4{
-position:absolute;
-top:1400px;
-left:75%;
-justify-content:center;
-z-index: 10;
-width:200px;
-height:200px;
-}
-.textspacing{
-    margin:auto;
-}
-.textspacing2{
-    font-size:17px;
-    margin:auto;
-}
-
- .button-row 
-        {
-            display: flex;
-            justify-content: space-around;
-            width: 80%;
-            max-width: 900px;
-            position: fixed;
-            bottom: 100px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 0;
-            margin: 0;
-            z-index: 20; 
-        }
-        .centerguy 
-        {
-            display: flex;
             flex-direction: column;
-            align-items: center;
-            z-index: 10;
-            position: relative;
-            padding-top: 200px;
-            animation: slideDown2 2s ease-in-out;
         }
+        .legacy{
+            font-size:25vh;
+            font-weight:bold;
+            font-family: sans-serif;
+            color:black;
+            animation-name:legacy;
+            animation-duration:5s;
+            animation-iteration-count:infinite;
+            animation-timing-function:linear;
+            animation-direction:alternate;
+            animation-play-state:running;
+            
+        }
+        @keyframes legacy{
+        from{color:black}
+        to{color:green}
+
+        }
+        .imagestyle{
+            border-radius:100px;
+            animation-name:imagestyle;
+            animation-duration:3s;
+            animation-iteration-count:1;
+            animation-timing-function:ease-in-out;
+            animation-play-state:running;
+            animation-fill-mode:forwards;
+        }
+        @keyframes imagestyle{
+            from {opacity: 0; border-radius:0px;}
+            to {opacity: 1; border-radius:100px;}
+        }
+        .s1{
+        border-radius:50%;
+        color:orange;
+        width:100px;
+        height:100px;
+        border:none;
+        display:flex;
+        background-color:purple;
+        position:absolute;
+        top:1000px;
+        left:25%;
+        justify-content:center;
+        z-index: 40;
+        cursor: pointer;
+        }
+        .s2{
+        border-radius:50%;
+        color:orange;
+        width:100px;
+        height:100px;
+        border:none;
+        display:flex;
+        background-color:purple;
+        position:absolute;
+        top:1000px;
+        left:37.5%;
+        justify-content:center;
+        z-index: 40;
+        cursor: pointer;
+        }
+        .s3{
+        border-radius:50%;
+        color:orange;
+        width:100px;
+        height:100px;
+        border:none;
+        display:flex;
+        background-color:purple;
+        position:absolute;
+        top:1000px;
+        left:62.5%;
+        justify-content:center;
+        z-index: 40;
+        cursor: pointer;
+        }
+        .s4{
+        border-radius:50%;
+        font-size:15px;
+        color:orange;
+        width:100px;
+        height:100px;
+        border:none;
+        display:flex;
+        background-color:purple;
+        position:absolute;
+        top:1000px;
+        left:75%;
+        justify-content:center;
+        z-index: 40;
+        cursor: pointer;
+        }
+        .label{
+            font-size:20px;
+            font-weight:bold;
+            color:black;
+            font-family:sans-serif;
+            margin:auto;
+            position:absolute;
+            top:800px;
+            left:0%;
+        
+            transition: color 1.5s ease;
+            
+
+        }
+        .label:hover{
+            color:green;
+        }
+
+
+        .ball1{
+        position:absolute;
+        top:1400px;
+        left:25%;
+        justify-content:center;
+        z-index: 10;
+        width:200px;
+        height:200px;
+        }
+        .ball2{
+        position:absolute;
+        top:1400px;
+        left:37.5%;
+        justify-content:center;
+        z-index: 10;
+        width:200px;
+        height:200px;
+        }
+        .ball3{
+        position:absolute;
+        top:1400px;
+        left:62.5%;
+        justify-content:center;
+        z-index: 10;
+        width:200px;
+        height:200px;
+        }
+        .ball4{
+        position:absolute;
+        top:1400px;
+        left:75%;
+        justify-content:center;
+        z-index: 10;
+        width:200px;
+        height:200px;
+        }
+        .textspacing{
+            margin:auto;
+        }
+        .textspacing2{
+            font-size:17px;
+            margin:auto;
+        }
+        #Start1, #Start2, #Start3, #Start4 
+        {
+            width: 1300px;
+            text-align: center;
+            display: block;
+            right: 0;
+            color: rgb(0, 0, 0);
+            backdrop-filter: blur(30px);
+        }
+
     </style>
 </head>
 
@@ -482,18 +444,13 @@ height:200px;
     <div class="content">
          <button id="s1"; class="s1"><h1 class="textspacing" >Start</h1></button>
         <button id="s2"; class="s2"><h1 class="textspacing" >Mid career</h1></button>
-        <button id="s3"; class="s3"><h1 class="textspacing">End career</h1>></button>
+        <button id="s3"; class="s3"><h1 class="textspacing">End career</h1></button>
         <button id="s4"; class="s4"><h1 class="textspacing2">Retirement</h1></button>
         <h3 id="Start1"; class = "label"></h3>
         <h3 id="Start2"; class = "label"></h3>
         <h3 id="Start3"; class = "label"></h3>
         <h3 id="Start4"; class = "label"></h3>
-        
-
     
-        <script src="legacyscript.js">
-         
-        </script>
         <h1 class="legacy">MAMBA'S LEGACY</h1>
     </div>
 
@@ -515,27 +472,26 @@ height:200px;
     </div>
 </div>
 
+<div class="button-row">
+            <button class="merchandisebutton nav-button">
+                <div class="navtext">Merchandise</div>
+            </button>
+            <button class="biographybutton nav-button">
+                <div class="navtext">Biography</div>
+            </button>
+            <button class="statlinesbutton nav-button">
+                <div class="navtext">Stat-lines</div>
+            </button>
+            <button class="homepagebutton nav-button">
+                <div class="navtext">Home page</div>
+            </button>
+</div>
+<h1> MAMBA OUT </h1>
 
      <footer class="footer">
-
-
-        <h1 style="color: rgb(245, 191, 28); font-size: 24px; margin: 0;">
-            © 2025 THE BLACK MAMBA: 20 YEAR LEGACY. All rights reserved.
-        </h1>
-        <button onclick="window.location.href='index.html'"; class="homebutton">
-            <div class="navtext">Home page</div>
-           
-        </button>
-        <button onclick="window.location.href='biography.html'"; class="biographybutton">
-           <div class="navtext">Biography</div>
-        </button>
-        <button onclick="window.location.href='stat-lines.html'"; class="statlinesbutton">
-           <div class="navtext">Statlines</div>
-        </button>
-        <button onclick="window.location.href='merchandise.html'"; class="legacybutton">
-           <div class="navtext">Merchandise</div>
-        </button>
-        
+        <h1>© 2025 THE BLACK MAMBA: 20 YEAR LEGACY. All rights reserved.</h1>        
     </footer>
+
+<script src="legacyscript.js"></script>
 </body>
 </html>
