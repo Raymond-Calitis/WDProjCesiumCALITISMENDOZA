@@ -15,3 +15,6 @@ buttons[2].addEventListener("click", () => {
 buttons[3].addEventListener("click", () => {
     window.location.href = "legacy.html";
 });
+buttons[4].addEventListener("click", () => {
+    window.location.href = "quiz.html";
+});
