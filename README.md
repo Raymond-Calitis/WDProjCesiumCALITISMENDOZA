@@ -70,3 +70,6 @@ This page will show you how many of the trivia questions you got right.
 
 # FINAL MODIFICATION PROPOSAL:
 <img src="https://raw.githubusercontent.com/Raymond-Calitis/WDProjCesiumCALITISMENDOZA/main/images/RatingPage.png" width="400" alt="Ratings Page Wireframe">
+
+## Usage of CRUD:
+On the Ratings Page, users will be able to Create new ratings and Delete old ones to keep their feedback updated. On the Sign Up page, the Read operation will display the user's informations, allowing them to Update their username and jersey number. Together, these actions provide a full CRUD process where data is saved directly to the browser's localStorage. This allows users to fully manage their data by adding, viewing, changing, or removing their information without needing a backend server.
