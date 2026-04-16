@@ -21,4 +21,4 @@ if (q5 && q5.value  === 'correct') {
     score++
 }else(score=score)
 document.getElementById("score").textContent = "Your score is: " + score + "/5";
-}
+} 
